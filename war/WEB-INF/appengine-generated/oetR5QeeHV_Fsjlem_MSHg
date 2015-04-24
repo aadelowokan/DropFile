@@ -1,0 +1,66 @@
+New Back Office Screens
+
+- Start with Facility Login Screen and set all the session variables etc as is now.
+- Agree icons from the start for each main link - current ones look good on index.html
+- Remove Patient Search from top baner and include logo
+
+- Home (1 person - 1 week)
+	- Summary drawn from Widgets View: 
+		- Number of Appointments Today (double box with icons)
+		- Breakdown by Source by numbers for today (Online, Call Centre, GP and Walk In) 
+		- Breakdown by Appt Type by Numbers (double box)
+		- Monthly Totals
+		- DNA rate so far this month (with triagnle and ! mark symbol)
+		- If Patient Flow stats exist then percentage seen within 15mins of their appointment time
+	- Big Calendar View Button
+	- Big Dashboard View Button
+
+- Dashboards (1 person - 4 weeks)
+	- Current Statistics
+		- Export Options into Excel or PDF
+	- Statements
+		- Export Options into Excel or PDF 
+        - Review Brendan's Monthly PDF for detailed screens
+	- Do we allow a data mining facility to allow them build their own queries?? (maybe version2)
+
+- Calendar (1 person - 4 weeks)
+	- View Appointments
+	- Create New Appointments
+	- Add User on New Appointment
+	- Easy Option to Edit Details in calendar view (re-use as much as we can from call centre screens)
+	- Appointment Summary (add in when it was made and source and if it was modified and by whom). 
+	  Also add in link to Patient Flow for that appointment.
+	- Make sure all the defaults are coming in correctly, consultants, default durations based on appointment types, calednar start and close, default duration set-ups etc
+	- Make sure the Report Link works to download pdf of todays or current views appointments
+	- Invesigate columned calendar view (http://stackoverflow.com/questions/11846973/how-to-split-single-day-in-column-in-fullcalendar)
+   	- Read only view for archived appointments
+
+(1 person - 1 week to bring all existing code together)        
+- Profile Page: Tabbed approach like we've done for the users but might just need more tabs
+- Patient Search - incorporate what we have already done for the call centre. Make sure they can only see patients in their clinic though!
+- Reports
+	- Phlebotomy Report
+	- User Report
+
+- Configuration (1 person - version 1 - 2 weeks)
+	- Calendar Settings - duration, multi column view, Opening Times, Closing Times etc, Multi Site view 
+   	- Appointment Types - and durations - Accept Payments based on Apppintment Type. Set a Front Office and Back Office Flag for App Type.
+        - Communication Options - do we want to tie this into a payment option?
+	- Staff Manager - Manage users in sq_users table
+
+
+Additional Views based on user roles
+- Call Centre View (based on user role)
+- Ops Screens based on role and existing patient search functionality
+- Call In Screen New Login for that
+
+Additional Considerations
+- New tables for configuration
+- New Views if we are allowing them to set-up their available days and times
+- Browser Compatibility Testing
+- Mobile/Tablet Testing
+- Performance in Back office views
+- Security: ensure clinic security is protected and no cross over is allowed.
+- Audit Logging
+	- User Logs in and Logs out
+	- Any addding or editting of appointment info or user details - create mirror/audit tables
